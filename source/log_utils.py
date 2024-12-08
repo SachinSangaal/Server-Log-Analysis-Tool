@@ -10,8 +10,11 @@ class LogUtils:
     @staticmethod
     def extract_endpoint(line):
         """Extracts the endpoint from a log line."""
-        parts = re.split(r'"[A-Z]+\s', line)
-        return parts[1].split(' ')[0] if len(parts) > 1 else None
+        ip = LogUtils.extract_ip(line)
+        if ip:  # Ensure the line has a valid IP
+            parts = re.split(r'"[A-Z]+\s', line)
+            return parts[1].split(' ')[0] if len(parts) > 1 else None
+        return None
 
     @staticmethod
     def is_valid_ip(ip):
