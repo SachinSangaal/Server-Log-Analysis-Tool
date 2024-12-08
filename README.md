@@ -99,5 +99,5 @@ python source/main.py
 <ul>
     <li>Add support for analyzing IPV6 log formats.</li>
     <li>Integrate a web-based interface for uploading logs and viewing results.</li>
-    <li>Extend functionality to support larger files real-time log analysis.</li>
+    <li>Currently, the tool supports log file analysis for up to 10,000 log entries. Future enhancements will enable real-time log analysis and extend the functionality to handle larger files efficiently.</li>
 </ul>
